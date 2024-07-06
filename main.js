@@ -83,7 +83,7 @@ else
     console.log("not a digit")
 
 */
-  /*  //check result grade if else
+  /*  //check result grade switch case
 var digit = prompt("enter a digit:");
 switch (digit) {
   case "1":
@@ -175,10 +175,57 @@ console.log(checkOddOrEven(17));
 })("you can pass parameter");
 */
 
-
+/*
 //function expression
 
 var display2=function display(){
   console.log("hellow");
 }
 display2();
+*/
+/*
+//sum total array value by for loop
+const array = [23, 34, 77, 99, 324];
+let sum = 0;
+for (let i = 0; i < array.length; i++) {
+  sum += array[i];
+  // sum = sum + array[i];
+}
+
+console.log(sum);
+*/
+/*
+//sum total array value by for loop from user input
+var num = new Array ();
+for(var i =0 ; i < 5;i++){
+   num[i] = parseInt(prompt("enter a number :"))
+}
+let sum = 0;
+for (let i = 0; i < 5; i++) {
+  sum = sum + num[i];
+  // sum = sum + array[i];
+}
+console.log(sum);
+*/
+/*
+
+//array libary method
+var number = [80,160,140,50,60];
+number.sort(function(a,b){
+  return a-b;
+});
+console.log(number);
+*/
+console.clear()
+ function highestScore(score){
+ var max = score[0];
+ for(var x=0;x<score.length;x++){
+    if (max<score[x]) {
+      max = score[x];
+    }
+    return max;
+ }
+ }
+ let score= [20,30,120,30,5,506,201,400]
+ var maxScore = highestScore(score);
+ console.log(maxScore)
