@@ -6,4 +6,8 @@
 ##### ➣even number by continue keyword
 ##### ➣even or od number by function
 ##### ➣function expression
-➣
+##### ➣array library method
+##### ➣object with constructor method method
+##### ➣adding a function inside constructor method
+
+##### ➣
