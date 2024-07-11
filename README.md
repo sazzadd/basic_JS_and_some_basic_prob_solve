@@ -3,7 +3,8 @@
 #### ➣farenheit to celcius
 #### ➣check result grade if else
 #### ➣check the result grade switch case
-#### ➣even number by continue keyword##### ➣even or od number by function
+#### ➣even number by continue keyword
+##### ➣even or od number by function
 #### ➣function expressio
 #### ➣array library method
 #### ➣object with constructor method method
