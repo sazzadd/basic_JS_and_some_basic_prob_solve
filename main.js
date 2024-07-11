@@ -216,6 +216,7 @@ number.sort(function(a,b){
 });
 console.log(number);
 */
+/**
 console.clear()
  function highestScore(score){
  var max = score[0];
@@ -229,3 +230,29 @@ console.clear()
  let score= [20,30,120,30,5,506,201,400]
  var maxScore = highestScore(score);
  console.log(maxScore)
+
+  */
+
+
+//object with constructor method method
+
+/** 
+//adding a function inside constructor method
+function Student (names,age,grade,lang){
+  this.names = names ;
+  this.age = age ;
+  this.grade = grade ;
+  this.lang= lang;
+  this.display = function(){
+    console.log(this.names,this.age,this.grade,this.lang)
+  }
+}
+var student1 = new Student("sazzad",31, 3.2,["bngla","english","hindi"]);
+var student2 = new Student("rahim",21, 2.2,["bangla","korian","hindi"]);
+var student3 = new Student("karim",24, 3.8,["hibru","chiniese","spanish"]);
+console.log(student1.names);
+
+student1.display();
+ student2.display();
+ student3.display();
+ **/
