@@ -1,3 +1,13 @@
+//basic push pop
+/*
+const name =['salam','kalam','gelam','pailam'];
+console.log(name);
+const out1= name.pop();
+console.log(name);
+const out2= name.pop();
+console.log(name);
+console.log(out1,out2);
+*/
 /*
 
 //object example in js
@@ -83,34 +93,34 @@ else
     console.log("not a digit")
 
 */
-  /*  //check result grade switch case
+/*  //check result grade switch case
 var digit = prompt("enter a digit:");
 switch (digit) {
-  case "1":
-    console.log("Zero");
-    break
-  case "2":
-    console.log("Two");
-    break
-  case "3":
-    console.log("Three");
-    break
-  case "4":
-    console.log("Four");
-  case "5":
-    console.log("Five");
-  case "6":
-    console.log("Six");
-  case "7":
-    console.log("Seven");
-  case "8":
-    console.log("Eight");
-  case "9":
-    console.log("nine");
+case "1":
+  console.log("Zero");
+  break
+case "2":
+  console.log("Two");
+  break
+case "3":
+  console.log("Three");
+  break
+case "4":
+  console.log("Four");
+case "5":
+  console.log("Five");
+case "6":
+  console.log("Six");
+case "7":
+  console.log("Seven");
+case "8":
+  console.log("Eight");
+case "9":
+  console.log("nine");
 
-  default:
-    console.log("not a digit");
-    break;
+default:
+  console.log("not a digit");
+  break;
 
 }
 */
@@ -256,3 +266,29 @@ student1.display();
  student2.display();
  student3.display();
  **/
+/*
+//math object 
+var randomNnum = Math.floor(Math.random()*6);
+console.log(randomNnum);
+*/
+
+//guess number 
+/*
+var numOfwon=0;
+var numOflost=0;
+for (i = 1; i <= 5; i++) {
+
+  guessNum = parseInt(prompt("enter a number from 1 to 5"));
+  randomNum = Math.floor(Math.random() * 5) + 1;
+  if (guessNum == randomNum) {
+    console.log("you have won");
+    numOfwon++;
+  } else {
+    console.log("you have lost");
+    numOflost++;
+  }
+}
+document.write("number of won: " + numOfwon<br>);
+
+document.write("number of lost: " + numOflost);
+*/
