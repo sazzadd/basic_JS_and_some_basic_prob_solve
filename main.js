@@ -273,7 +273,7 @@ console.log(randomNnum);
 */
 
 //guess number 
-/*
+
 var numOfwon=0;
 var numOflost=0;
 for (i = 1; i <= 5; i++) {
@@ -291,4 +291,3 @@ for (i = 1; i <= 5; i++) {
 document.write("number of won: " + numOfwon<br>);
 
 document.write("number of lost: " + numOflost);
-*/
