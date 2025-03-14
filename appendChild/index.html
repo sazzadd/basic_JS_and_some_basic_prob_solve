@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <ul id="myList">
+            <li>default</li>
+
+        </ul>
+        <button id="btn1" type="button">append Element</button>
+        <button id="btn2" onclick="remove()" type="button">Remove
+            Element</button>
+        <script>
+            let btn1 = document.getElementById("btn1");
+            let btn2 = document.getElementById("btn2");
+            let list = document.getElementById("myList");
+            btn1.addEventListener('click',()=> {
+                let element_node = document.createElement("li");
+                let text = document.createTextNode("something.......");
+                element_node.appendChild(text)
+             
+                list.appendChild(element_node);
+
+                console.log(element_node);
+            })
+            const remove =()=>{
+                let list = document.getElementById("myList");
+                list.removeChild(list.lastElementChild); 
+            }
+
+            // btn2.addEventListener('click', ()=> {
+            //     let list = document.getElementById("myList");
+            //     list.removeChild(list.lastElementChild);
+            // })
+        </script>
+    </body>
+
+</html>
