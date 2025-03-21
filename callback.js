@@ -1,6 +1,7 @@
-const square = (num) => {
-  return num * num;
+const square = (parameter) => {
+  return parameter * parameter;
 };
+
 function cube(num) {
  return num * square(num);
 }
