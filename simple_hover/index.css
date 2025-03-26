@@ -1,0 +1,36 @@
+#container {
+    width: 350px;
+    aspect-ratio: 1/1;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMv8-iKMsu4D5H26DZE9v3zm_YQGCFFawyUYgG8RIIlbsocSc9WqF6NnAcCeiiKcwzCAQ&usqp=CAU");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    position: relative;
+    
+}
+
+#child {
+    display: flex;
+    /* align-items: center; */
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(10px);
+    transition: 100% 0;
+    background-color: rgb(8, 132, 160);
+    mix-blend-mode: overlay;
+    transform:translate(-50% ,-100%);
+    border-radius: 10px;
+    /* translate: 100% 0; */
+    transition: transform 0.4s ease-in-out;
+}
+#child >p{
+    font-size: 18px;
+    overflow: scroll;
+}
+#container:hover #child{
+    transform: translateX(0%);
+   
+   
+}
