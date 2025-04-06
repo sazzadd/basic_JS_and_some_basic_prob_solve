@@ -15,3 +15,4 @@ console.log(lagestValue)
 const largestNumber = new Set(arr)
 
 console.log(Math.max(...Array.from(largestNumber)))
+console.log(arr.slice(-2))

@@ -8,6 +8,7 @@ function secondLargest(arr) {
   } else {
     return -1;
   }
-  console.log(specialArr);
+  console.log(specialArr); 
 }
 console.log(secondLargest([16, 12, 10, 15, 20, 20]));
+console.log()
