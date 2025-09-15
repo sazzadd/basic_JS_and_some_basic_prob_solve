@@ -11,8 +11,9 @@ function Person(first, last, age, eye) {
   this.firstName = first;
   this.lastName = last;
   this.age = age;
-  this.fullName= function(){
-            return this.firstName + ""+ this.lastName
-        }
+  this.fullName = function () {
+    return this.firstName + " " + this.lastName;
+  };
 }
-const sazzad = new Person("sazzad","ador",35)
+const sazzad = new Person("sazzad", "ador", 29);
+console.log(sazzad.fullName());
