@@ -1,7 +1,9 @@
 function even(num) {
   if (num % 2 == 0) {
-    return true;
+    return "even";
   } else {
-    return false;
+    return "else";
   }
 }
+const result = even(1);
+console.log(result);
