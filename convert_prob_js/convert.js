@@ -7,3 +7,12 @@ function inchToFeet(inch) {
 }
 const height = inchToFeet(45);
 console.log(height);
+// celsius to farhenhite
+
+function celsiusToFar(celsius) {
+  let result = celsius * (9 / 5) + 32;
+  return result;
+}
+
+const temperature = celsiusToFar(0);
+console.log(temperature);
