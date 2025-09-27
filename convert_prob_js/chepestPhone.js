@@ -29,4 +29,6 @@ function cheapestPhone(phones) {
 }
 console.log(cheapestPhone(mobiles));
 
-// to
+// to total price
+
+
