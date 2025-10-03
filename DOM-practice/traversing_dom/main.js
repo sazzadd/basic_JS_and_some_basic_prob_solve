@@ -9,3 +9,9 @@ for (let sec of sectionClass) {
 // kicu korina
 
 sectionClass.classList.add("text-color");
+
+const unOrderList = document.querySelector("#section1 ul");
+
+const li = document.createElement("li");
+li.innerText = "created ne element";
+unOrderList.appendChild(li);
