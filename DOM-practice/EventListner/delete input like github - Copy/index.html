@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>github delete</title>
+    </head>
+    <body>
+        <h3 id="secret-info">delete me just type "delete" and click button </h3>
+        <input type="text" id="myinput">
+        <button id="btn" disabled>click </button>
+        <div id="container">
+
+        </div>
+        <script>
+          let  inputField =  document.getElementById("myinput");
+          let btn  = document.getElementById("btn");
+         let container = document.getElementById ("container") ; 
+          
+
+
+          
+          inputField.addEventListener('keyup', function (event) {
+            console.log(event.target.value);
+            const text = event.target.value; 
+            if (text === "delete"){
+                btn.removeAttribute ("disabled")
+            }
+            else{
+                btn.setAttribute("disabled" , true)
+            }
+
+
+          })
+
+          btn.addEventListener('click', function (event) {
+            console.log("mouse event is happen")
+           const secretInfo  =   document.getElementById("secret-info")
+           secretInfo.style.display ="none"
+            const successMsg =  document.createElement("p");
+            successMsg.innerText = "you have successfully delete this massage by typing delete" ;
+            successMsg.style.color = "green";
+            successMsg.style.fontWeight = "bold";
+            
+            container.appendChild(successMsg)
+          })
+
+
+        </script>
+    </body>
+</html>

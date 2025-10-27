@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Traversing dom</title>
+    </head>
+    <body>
+        <div id="container">
+            <!-- section are append here -->
+        </div>
+
+        <script src="./main.js"></script>
+        <script>
+            const container = document.getElementById("container");
+
+            for(let i =1; i <=5 ; i++){
+
+                const colors = ["#A8DADC", "#F1FAEE", "#FFE5D9", "#E9EDC9", "#F8EDEB"];
+
+
+                const section = document.createElement("section");
+
+                section.style.backgroundColor = colors[i-1];
+                section.style.cssText = "padding:20px ;"
+
+                section.id = `section-${i}`;
+                section.className = `sec${i}`
+
+
+                console.log(section)
+
+                const heading = document.createElement("h2");
+                heading.innerText = `section-${i}`
+                section.appendChild(heading);
+
+                const ul = document.createElement("ul")
+                section.appendChild(ul);
+                for(let i = 1 ; i <=5 ; i++){
+                   let list = document.createElement("li");
+                   ul.appendChild(list);
+
+                   let listText = document.createElement("p");
+                   list.appendChild(listText)
+                   listText.innerText = `item -${i}`;
+
+
+
+
+                }
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+              container.appendChild(section);
+
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> bank Apss </title>
+
+        <!-- daisy cdn -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet"
+            type="text/css" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <!-- my style  -->
+
+        <style>
+      /* Glass effect */
+      .glass-card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Input focus effect */
+      input:focus {
+        outline: none;
+        border-color: #6366f1;
+        box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+      }
+
+      /* Button hover */
+      .btn-gradient {
+        background: linear-gradient(135deg, #6366f1, #3b82f6);
+        transition: all 0.3s ease;
+      }
+
+      .btn-gradient:hover {
+        background: linear-gradient(135deg, #3b82f6, #6366f1);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(99, 102, 241, 0.3);
+      }
+    </style>
+    </head>
+    <body>
+        <div class="wrapper-conatainer h-screen flex justify-center">
+            <div class="mockup-phone">
+
+                <div class="mockup-phone-camera"></div>
+                <div
+                    class="mockup-phone-display  grid place-content-center bg-neutral-300">
+                    <h1 class="text-red"> heloo </h1>
+
+                    <!-- login section  -->
+
+                    <form
+                        class="glass-card w-72 rounded-2xl p-6 flex flex-col gap-4 text-center">
+                        <h2 class="text-2xl font-bold text-white mb-2">
+                            Welcome Back 👋
+                        </h2>
+                        <p class="text-sm text-gray-200 mb-3">
+                            Login to your Bank Account
+                        </p>
+
+                        <input
+                            type="number"
+                            placeholder=" enter ur Phone  number"
+                            class="input input-bordered w-full rounded-full px-4 py-2 text-gray-800" />
+                        <input
+                            type="password"
+                            placeholder="enter ur 4 digit pin"
+                            class="input input-bordered w-full rounded-full px-4 py-2 text-gray-800" />
+
+                        <button id="login-btn"
+                            class="btn btn-gradient text-white rounded-full mt-2 font-semibold py-2">
+                            Login
+                        </button>
+
+                        <p class="text-xs text-gray-200 mt-2">
+                            Don’t have an account?
+                            <a href="#"
+                                class="text-blue-300 hover:underline">Sign
+                                up</a>
+                        </p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+    <script src="./js/login.js">
+
+    </script>
+</html>
