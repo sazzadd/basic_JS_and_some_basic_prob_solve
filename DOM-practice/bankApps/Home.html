@@ -70,14 +70,15 @@
                     <div class="div">
                         <div class="stat">
                             <hr>
-                            <div class="text-[20px] font-bold">89,400</div>
+                            <div class="text-[20px] font-bold" id="account-ballance">100</div>
                             <div class="stat-desc">Available Balance</div>
+                            <div class="ErrorMsgBox" id="ErrorMsgBox"></div>
                             <div class="divider"></div>
                         </div>
                     </div>
 
                     <div class="row  flex justify-between px-[20px]">
-                        <!-- add money -->
+                        <!-- add money toggle btn-->
                         <div
                             class="add-money flex flex-col justify-center items-center text-center border-2 border-[#e8e2e1] rounded-xl p-4">
                             <img src="./images/wallet.png"
@@ -86,7 +87,7 @@
                                 class="text-blue-600 text-[13px] font-medium">Add
                                 Money</a>
                         </div>
-                        <!-- cash out  -->
+                        <!-- cash out toggle btn -->
                         <div
                             class="add-money flex flex-col justify-center items-center text-center border-2 border-[#e8e2e1] rounded-xl p-4">
                             <img src="./images/withdraw.png"
@@ -107,7 +108,7 @@
                     </div>
 
                     <!-- add money form input section -->
-                    <div class="px-[20px] py-5">
+                    <div class="px-[20px] py-5 hidden">
                         <div
                             class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                             <div class="card-body">
@@ -130,13 +131,34 @@
                         </div>
                     </div>
 
-                    <!-- also give here a minimilist bg color for this for  -->
+                   <!-- cash-out  input form  -->
+                       <div class="px-[20px] py-5">
+                        <div
+                            class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                            <div class="card-body">
+                                <fieldset class="fieldset">
+                                    <label class="label">Amount</label>
+                                    <input type="text" class="input"
+                                        placeholder="cash-out of money" 
+                                        id="cash-out-input"
+                                        />
+                                    <label class="Pin"></label>
+                                    <input id="cash-out-pin-number" type="password" class="input"
+                                        placeholder="Pin Number"
+                                        autoComplete="off" />
+
+                                    <button id="cash-out-btn"
+                                        class="btn btn-neutral mt-4">cash-out</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
         </div>
-        <script src="./js/home.js">
+        <script src="./js/addMoney.js"></script>
+        <script src="./js/cashOut.js"></script>
 
-        </script>
     </body>
 </html>
