@@ -4,9 +4,137 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <!-- daisy cdn -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet"
+            type="text/css" />
+        <script
+            src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <!-- my style  -->
+        <style>
+            .container {
+                padding:80px 20px 50px 20px;
+            }
+            
+            hr{color:#f5f5f5;
+            background-color:#f5f5f5
+            padding:0px 0px;
+            }
+            <style>
+/* নিশ্চিত করো element-এ overflow-y-auto আছে */
+.mockup-phone-display {
+  /* যদি তুমি Tailwind ব্যবহার করো, এটা ক্লাসে রাখতে পারো:
+     class="mockup-phone-display container bg-white overflow-y-auto"
+  */
+  max-height: 80vh; /* scroll ঘটাতে উচ্চতা দিতে হবে — প্রয়োজনে মান বদলাও */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  /* Firefox scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: purple #f5f5f5;
+}
+
+/* WebKit browsers (Chrome, Edge, Safari) */
+.mockup-phone-display::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.mockup-phone-display::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+
+.mockup-phone-display::-webkit-scrollbar-thumb {
+  background-color: purple !important;
+  border-radius: 10px;
+  border: 2px solid transparent; /* থাম্বকে একটু spacing দেয় */
+  background-clip: padding-box;
+}
+
+.mockup-phone-display::-webkit-scrollbar-thumb:hover {
+  background-color: #6b21a8; /* গাঢ় purple on hover */
+}
+</style>
+
+         </style>
     </head>
     <body>
-        <h1>welcome home page </h1>
 
+        <div class="wrapper-conatainer h-screen flex justify-center">
+
+            <div class="mockup-phone ">
+                <div class="mockup-phone-camera "></div>
+                <div
+                    class="mockup-phone-display container  bg-white overflow-y-auto scroll-smooth">
+                    <h1 class="text-red"> </h1>
+                    <div class="div">
+                        <div class="stat">
+                            <hr>
+                            <div class="text-[20px] font-bold">89,400</div>
+                            <div class="stat-desc">Available Balance</div>
+                            <div class="divider"></div>
+                        </div>
+                    </div>
+
+                    <div class="row  flex justify-between px-[20px]">
+                        <!-- add money -->
+                        <div
+                            class="add-money flex flex-col justify-center items-center text-center border-2 border-[#e8e2e1] rounded-xl p-4">
+                            <img src="./images/wallet.png"
+                                class="w-7 h-7 mb-2" alt="Add money" />
+                            <a href="#"
+                                class="text-blue-600 text-[13px] font-medium">Add
+                                Money</a>
+                        </div>
+                        <!-- cash out  -->
+                        <div
+                            class="add-money flex flex-col justify-center items-center text-center border-2 border-[#e8e2e1] rounded-xl p-4">
+                            <img src="./images/withdraw.png"
+                                class="w-7 h-7 mb-2" alt="Add money" />
+                            <a href="#"
+                                class="text-blue-600 text-[13px] font-medium">Cash
+                                Out</a>
+                        </div>
+
+                        <div
+                            class="add-money flex flex-col justify-center items-center text-center border-2 border-[#e8e2e1] rounded-xl p-4">
+                            <img src="./images/wallet.png"
+                                class="w-7 h-7 mb-2" alt="Add money" />
+                            <a href="#"
+                                class="text-blue-600 text-[13px] font-medium">Add
+                                Money</a>
+                        </div>
+                    </div>
+
+                    <!-- add money form input section -->
+                    <div class="px-[20px] py-5">
+                        <div
+                            class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                            <div class="card-body">
+                                <fieldset class="fieldset">
+                                    <label class="label">Amount</label>
+                                    <input type="text" class="input"
+                                        placeholder="Amount of money" />
+                                    <label class="label"></label>
+                                    <input type="password" class="input"
+                                        placeholder="Password"
+                                        autoComplete="off" />
+
+                                    <button id="add-money"
+                                        class="btn btn-neutral mt-4">Add
+                                        money</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- also give here a minimilist bg color for this for  -->
+
+                </div>
+            </div>
+        </div>
+        <script src="./js/home.js">
+
+        </script>
     </body>
 </html>
