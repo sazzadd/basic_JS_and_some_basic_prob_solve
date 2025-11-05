@@ -21,8 +21,8 @@ document
     if (cashOutPin === 1234) {
       if (balance < cashOutInput) {
         alert("!");
-        msg.innerText = "Your balance is now empty!";
-       
+        msg.innerText = "Insufficient balance!";
+
         alertBox.appendChild(msg);
         return;
       }

@@ -20,41 +20,18 @@
             background-color:#f5f5f5
             padding:0px 0px;
             }
-            <style>
-/* নিশ্চিত করো element-এ overflow-y-auto আছে */
-.mockup-phone-display {
-  /* যদি তুমি Tailwind ব্যবহার করো, এটা ক্লাসে রাখতে পারো:
-     class="mockup-phone-display container bg-white overflow-y-auto"
-  */
-  max-height: 80vh; /* scroll ঘটাতে উচ্চতা দিতে হবে — প্রয়োজনে মান বদলাও */
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  /* Firefox scrollbar */
-  scrollbar-width: thin;
-  scrollbar-color: purple #f5f5f5;
-}
 
-/* WebKit browsers (Chrome, Edge, Safari) */
-.mockup-phone-display::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
+            .mockup-phone-display {
 
-.mockup-phone-display::-webkit-scrollbar-track {
-  background: #f5f5f5;
-}
+            max-height: 100vh; 
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            /* Firefox scrollbar */
+            scrollbar-width: thin;
+            scrollbar-color: purple;
+            }
 
-.mockup-phone-display::-webkit-scrollbar-thumb {
-  background-color: purple !important;
-  border-radius: 10px;
-  border: 2px solid transparent; /* থাম্বকে একটু spacing দেয় */
-  background-clip: padding-box;
-}
-
-.mockup-phone-display::-webkit-scrollbar-thumb:hover {
-  background-color: #6b21a8; /* গাঢ় purple on hover */
-}
-</style>
+                /* Smooth toggle animation */
 
          </style>
     </head>
@@ -70,9 +47,11 @@
                     <div class="div">
                         <div class="stat">
                             <hr>
-                            <div class="text-[20px] font-bold" id="account-ballance">100</div>
+                            <div class="text-[20px] font-bold"
+                                id="account-ballance">100</div>
                             <div class="stat-desc">Available Balance</div>
-                            <div class="ErrorMsgBox" id="ErrorMsgBox"></div>
+                            <div class="ErrorMsgBox text-red-400 text-sm"
+                                id="ErrorMsgBox"></div>
                             <div class="divider"></div>
                         </div>
                     </div>
@@ -80,19 +59,20 @@
                     <div class="row  flex justify-between px-[20px]">
                         <!-- add money toggle btn-->
                         <div
-                            class="add-money flex flex-col justify-center items-center text-center border-2 border-[#e8e2e1] rounded-xl p-4">
+                            id="add-money-btn"
+                            class="add-money-btn flex flex-col justify-center items-center text-center border-2 border-[#e8e2e1] rounded-xl p-4">
                             <img src="./images/wallet.png"
                                 class="w-7 h-7 mb-2" alt="Add money" />
-                            <a href="#"
+                            <a href="#" id="add-money-btn"
                                 class="text-blue-600 text-[13px] font-medium">Add
                                 Money</a>
                         </div>
                         <!-- cash out toggle btn -->
-                        <div
+                        <div id="cash-out-btn"
                             class="add-money flex flex-col justify-center items-center text-center border-2 border-[#e8e2e1] rounded-xl p-4">
                             <img src="./images/withdraw.png"
                                 class="w-7 h-7 mb-2" alt="Add money" />
-                            <a href="#"
+                            <a href="#" id="cash-out-btn"
                                 class="text-blue-600 text-[13px] font-medium">Cash
                                 Out</a>
                         </div>
@@ -107,19 +87,22 @@
                         </div>
                     </div>
 
+                    <!-- all form  -->
+
                     <!-- add money form input section -->
-                    <div class="px-[20px] py-5 hidden">
+                    <div id="add-money-form"
+                        class="px-[20px] mt-5 rounded-xl py-5 ">
                         <div
                             class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                             <div class="card-body">
                                 <fieldset class="fieldset">
                                     <label class="label">Amount</label>
                                     <input type="text" class="input"
-                                        placeholder="Amount of money" 
-                                        id="add-money-input"
-                                        />
+                                        placeholder="Amount of money"
+                                        id="add-money-input" />
                                     <label class="Pin"></label>
-                                    <input id="add-money-pin-number" type="password" class="input"
+                                    <input id="add-money-pin-number"
+                                        type="password" class="input"
                                         placeholder="Pin Number"
                                         autoComplete="off" />
 
@@ -131,19 +114,20 @@
                         </div>
                     </div>
 
-                   <!-- cash-out  input form  -->
-                       <div class="px-[20px] py-5">
+                    <!-- cash-out  input form  -->
+                    <div id="cash-out-form"
+                        class="px-[20px] rounded-xl mt-5 py-5 hidden">
                         <div
                             class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                             <div class="card-body">
                                 <fieldset class="fieldset">
                                     <label class="label">Amount</label>
                                     <input type="text" class="input"
-                                        placeholder="cash-out of money" 
-                                        id="cash-out-input"
-                                        />
+                                        placeholder="cash-out of money"
+                                        id="cash-out-input" />
                                     <label class="Pin"></label>
-                                    <input id="cash-out-pin-number" type="password" class="input"
+                                    <input id="cash-out-pin-number"
+                                        type="password" class="input"
                                         placeholder="Pin Number"
                                         autoComplete="off" />
 
@@ -159,6 +143,7 @@
         </div>
         <script src="./js/addMoney.js"></script>
         <script src="./js/cashOut.js"></script>
+        <script src="./js/feature.js"></script>
 
     </body>
 </html>
